@@ -12,3 +12,6 @@
 - Device names define how disks are presented to the OS
 - Attaching a volume does not automatically format or mount it
 - EBS can exist alone, but data is usable only when attached to EC2.
+
+## Proof of Work: Attached existing EBS
+<img width="1918" height="933" alt="image" src="https://github.com/user-attachments/assets/f7517e2d-ab3d-4ca3-a839-6cc59df40fc3" />
