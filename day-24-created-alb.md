@@ -42,3 +42,31 @@ This allows **ALB → EC2 communication**.
 ---
 
 > **Security Group controls access, Target Group defines targets, ALB distributes traffic.**
+
+## ALB Architecture Diagram
+
+Internet Users
+      |
+      v
+[ HTTP : 80 ]
+      |
+      v
++---------------------------+
+| Security Group            |
+| (xfusion-sg)              |
+| Allows HTTP : 80          |
++---------------------------+
+              |
+              v
++---------------------------+     +-------------------+     +---------------------------+
+| Application Load Balancer | --> | Target Group      | --> | Security Group            |
+| (xfusion-alb)             |     | (xfusion-tg)      |     | (EC2 Default SG)          |
+|                            |     |                   |     | Allows HTTP from ALB SG   |
++---------------------------+     +-------------------+     +---------------------------+
+                                                            |
+                                                            v
+                                                +---------------------------+
+                                                | EC2 Instance              |
+                                                | (xfusion-ec2)             |
+                                                | Nginx on port 80          |
+                                                +---------------------------+
