@@ -22,3 +22,6 @@ application-to-application (A2A) or application-to-person (A2P) destinations.
 
 ## One-line takeaway
 > CloudWatch alarms help detect performance issues and notify teams automatically.
+
+## Proof of work:
+<img width="1919" height="935" alt="Screenshot 2026-01-20 190351" src="https://github.com/user-attachments/assets/2588dc43-7b07-468b-81a0-11f4c32ce617" />
